@@ -15,9 +15,12 @@ export class UserComponent implements OnInit {
     province: 'ON'
   }
 
-  constructor() { }
+  constructor() { 
+    console.log("In constructor");
+  }
 
   ngOnInit() {
+    console.log("In ngOnInit");
   }
 
 }
