@@ -11,6 +11,7 @@ export class UserComponent implements OnInit {
   title : string;
   address : Address;
   skills : string[];
+  showSkills: boolean;
 
   constructor() { 
     console.log("In constructor");
@@ -26,6 +27,16 @@ export class UserComponent implements OnInit {
       province: 'ON'
     }
     this.skills = ['C++', 'JavaScript', 'Angular'];
+    this.showSkills = false;
+  }
+
+  toggleSkills(){
+    console.log("show skills")
+    if(this.showSkills == false){
+      this.showSkills = true;
+    }else{
+      this.showSkills = false;
+    }
   }
 
 }
