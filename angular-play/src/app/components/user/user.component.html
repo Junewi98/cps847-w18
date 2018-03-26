@@ -2,7 +2,7 @@
 <p>Title: {{title}}</p>
 <p>Address: {{address.street}}, {{address.city}}, {{address.province}}</p>
 
-<button (click)="toggleSkills()">Show Skills </button>
+<button (click)="toggleSkills()"> {{showSkills ? "Hide Skills" : "Show Skills"}} </button>
 <div *ngIf="showSkills">
   <h3>Skills: </h3>
   <ul>
