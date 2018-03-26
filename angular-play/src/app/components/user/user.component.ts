@@ -10,6 +10,8 @@ export class UserComponent implements OnInit {
   name : string;
   title : string;
   address : Address;
+  skills : string[];
+
   constructor() { 
     console.log("In constructor");
   }
@@ -23,6 +25,7 @@ export class UserComponent implements OnInit {
       city : 'Toronto',
       province: 'ON'
     }
+    this.skills = ['C++', 'JavaScript', 'Angular'];
   }
 
 }
