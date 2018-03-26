@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  name;
-  title;
+  name : string;
+  title : string;
   address : {
-    street,
-    city,
-    province
+    street : string,
+    city : string,
+    province : string
   }
 
   constructor() { 
