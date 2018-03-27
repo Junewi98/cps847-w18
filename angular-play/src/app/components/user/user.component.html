@@ -8,6 +8,11 @@
   <ul>
     <li *ngFor="let skill of skills "> {{skill}} </li>
   </ul>
+  
+  <form (submit)="addSkill(mySkill.value)">
+    <label>Add skill: </label>
+    <input type="text" #mySkill /> <br/>
+  </form>
 </div>
 
 <h3>Edit User</h3>
