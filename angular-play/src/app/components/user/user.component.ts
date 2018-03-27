@@ -44,6 +44,10 @@ export class UserComponent implements OnInit {
     this.skills.push(newSkill);
   }
 
+  deleteSkill(ind){
+    this.skills.splice(ind, 1)
+  }
+
 }
 
 interface Address {
