@@ -9,3 +9,31 @@
     <li *ngFor="let skill of skills "> {{skill}} </li>
   </ul>
 </div>
+
+<h3>Edit User</h3>
+<form>
+  <div>
+    <label>Name: </label>
+    <input type="text" name="name" [(ngModel)]="name" /> 
+  </div>
+
+  <div>
+    <label>Title: </label>
+    <input type="text" name="title" [(ngModel)]="title" /> 
+  </div>
+
+  <div>
+    <label>Street: </label>
+    <input type="text" name="address.street" [(ngModel)]="address.street" />
+  </div>
+
+  <div>
+    <label>City: </label>
+    <input type="text" name="address.city" [(ngModel)]="address.city" />
+  </div>
+  
+  <div>
+    <label>Province: </label>
+    <input type="text" name="address.province" [(ngModel)]="address.province" />
+  </div>
+</form>
