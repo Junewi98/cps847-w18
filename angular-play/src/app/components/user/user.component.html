@@ -45,3 +45,10 @@
     <input type="text" name="address.province" [(ngModel)]="address.province" />
   </div>
 </form>
+
+<h3>Albums</h3>
+ <div *ngFor="let album of albums">
+  <h4>Title: {{album.title}} </h4>
+  <p>Album Id: {{album.id}}</p>
+  <p>User Id: {{album.userId}}</p>
+</div>
