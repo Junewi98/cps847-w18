@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { DetailPage } from '../detail/detail';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -22,7 +24,11 @@ export class HomePage {
   }
 
   itemSelected(item){
-    alert('This is ' + item.text);
+    // individual detail page will be created and pushed to navigational stack
+    // we also pass information about the item to the detail page component
+    this.navCtrl.push(DetailPage,
+      { item: item }
+    );
   }
 
 }
