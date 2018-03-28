@@ -15,7 +15,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DetailPage {
 
+  item: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.item = navParams.get('item');
+    console.log(this.item);
+
+    // at this point, in a real-world app we would probably 
+    // get item description from a persitent storage
   }
 
   ionViewDidLoad() {
