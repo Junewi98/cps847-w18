@@ -37,7 +37,8 @@ export class HomePage {
     this.tags = this.tagsRef.snapshotChanges().map(changes => {
       // the '...' operator will "extract"/spread the attributes from c.payload.val(),
       // making it easier to access these attributes
-      // See https://reactjs.org/docs/jsx-in-depth.html#spread-attributes
+      // See https://reactjs.org/docs/jsx-in-depth.html#spread-attributes or
+      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
       // for details
       return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
     });
