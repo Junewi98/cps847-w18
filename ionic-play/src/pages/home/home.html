@@ -6,6 +6,18 @@
 
 <ion-content padding>
 
+  <ul>
+      <li *ngFor="let tag of tags | async">
+        <input type="text" #updatetext [value]="tag.text" />
+        <button (click)="updateTag(tag.key, updatetext.value)">Update</button>
+        <button (click)="deleteTag(tag.key)">Delete</button>
+      </li>
+  </ul>
+  <input type="text" #newtag />
+  <button (click)="addTag(newtag.value)">Add</button>
+  <button (click)="deleteAllTags()">Delete All</button>
+    
+
   <ion-list>
     <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
       {{ item.text }}
