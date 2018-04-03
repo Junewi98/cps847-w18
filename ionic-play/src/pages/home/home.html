@@ -6,22 +6,36 @@
 
 <ion-content padding>
 
-  <ul>
-      <li *ngFor="let tag of tags | async">
-        <input type="text" #updatetext [value]="tag.text" />
-        <button (click)="updateTag(tag.key, updatetext.value)">Update</button>
-        <button (click)="deleteTag(tag.key)">Delete</button>
-      </li>
-  </ul>
-  <input type="text" #newtag />
-  <button (click)="addTag(newtag.value)">Add</button>
-  <button (click)="deleteAllTags()">Delete All</button>
+  <ion-card>
+    <ion-card-header>
+      Test persistent storage 
+    </ion-card-header>
     
+    <ion-list>
+      <ion-item *ngFor="let tag of tags | async">
+        <ion-input #updatetext [value]="tag.text"></ion-input>
+        <button ion-button item-right (click)="updateTag(tag.key, updatetext.value)">Update</button>
+        <button ion-button item-right (click)="deleteTag(tag.key)">Delete</button>
+      </ion-item>
+    </ion-list>
+    <ion-item>
+      <ion-label floating>New tag</ion-label>
+      <ion-input type="text" value="" #newtag></ion-input>
+      <button ion-button item-right (click)="addTag(newtag.value)">Add</button>
+    </ion-item>
+    <button ion-button item-right (click)="deleteAllTags()">Delete All</button>  
+  </ion-card>
 
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-      {{ item.text }}
-    </button>
-  </ion-list>
+  <ion-card>
+    <ion-card-header>
+      Test item list
+    </ion-card-header>
+
+    <ion-list>
+      <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+        {{ item.text }}
+      </button>
+    </ion-list>
+  </ion-card>
 
 </ion-content>
