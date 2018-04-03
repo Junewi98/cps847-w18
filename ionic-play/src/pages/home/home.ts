@@ -31,7 +31,7 @@ export class HomePage {
       })
     }
 
-    // let's get some attributes fro persistent storage
+    // acessing a collection messages in the firebase
     this.tagsRef = db.list('messages');
     // Use snapshotChanges().map() to store the key
     this.tags = this.tagsRef.snapshotChanges().map(changes => {
